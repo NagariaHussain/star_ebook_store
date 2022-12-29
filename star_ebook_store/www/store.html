@@ -2,6 +2,12 @@
 
 {% block body %}
 
+<style>
+    .cover-image {
+        object-fit: cover;
+    }
+</style>
+
 <section class="hero is-large is-link">
     <div class="hero-body">
         <p class="title">
@@ -12,5 +18,37 @@
         </p>
     </div>
 </section>
+
+<main class="container is-max-widescreen">
+    <h3 class="title mt-5">Full Collection</h3>
+
+    <div class="columns my-6">
+        {% for ebook in ebooks %}
+        <div class="column is-one-fifth">
+            <a href="{{ ebook.route }}">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="cover-image">
+                            <img src="{{ ebook.cover_image }}" alt="Cover image">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4">{{ ebook.name }}</p>
+                                <p class="subtitle is-6">by {{ ebook.author_name }}</p>
+                            </div>
+                        </div>
+
+                        <div class="content">
+                            445 downloads
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</main>
 
 {% endblock %}
