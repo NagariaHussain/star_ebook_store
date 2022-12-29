@@ -87,7 +87,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "is_published",
  "links": [],
- "modified": "2022-12-29 22:54:13.944978",
+ "modified": "2022-12-29 23:10:00.672004",
  "modified_by": "Administrator",
  "module": "Star Ebook Store",
  "name": "eBook",
@@ -107,7 +107,6 @@
    "write": 1
   }
  ],
- "route": "store",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
