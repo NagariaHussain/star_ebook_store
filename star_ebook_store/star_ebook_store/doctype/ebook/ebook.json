@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
  "autoname": "prompt",
  "creation": "2022-12-29 10:50:23.661856",
@@ -8,7 +9,7 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "status",
+  "is_published",
   "price_inr",
   "cover_image",
   "description",
@@ -16,7 +17,8 @@
   "asset_file",
   "format",
   "author",
-  "toc"
+  "toc",
+  "route"
  ],
  "fields": [
   {
@@ -62,25 +64,30 @@
    "label": "Table Of Contents"
   },
   {
-   "default": "Available",
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "label": "Status",
-   "options": "Available\nUnavailable",
-   "reqd": 1
-  },
-  {
    "fieldname": "author",
    "fieldtype": "Link",
    "label": "Author",
    "options": "Author",
    "reqd": 1
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "Is Published?"
   }
  ],
+ "has_web_view": 1,
  "image_field": "cover_image",
  "index_web_pages_for_search": 1,
+ "is_published_field": "is_published",
  "links": [],
- "modified": "2022-12-29 19:51:02.845323",
+ "modified": "2022-12-29 22:54:13.944978",
  "modified_by": "Administrator",
  "module": "Star Ebook Store",
  "name": "eBook",
@@ -100,6 +107,7 @@
    "write": 1
   }
  ],
+ "route": "store",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
