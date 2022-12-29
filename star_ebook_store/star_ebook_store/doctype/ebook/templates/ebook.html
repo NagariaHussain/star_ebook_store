@@ -1,5 +1,10 @@
 {% extends "templates/store/base.html" %}
 
 {% block body %}
-    <h1>{{ title }}</h1>
+<nav class="breadcrumb is-centered" aria-label="breadcrumbs">
+    <ul>
+        <li><a href="/store">Store</a></li>
+        <li class="is-active"><a href="#" aria-current="page">All eBooks</a></li>
+    </ul>
+</nav>
 {% endblock %}
