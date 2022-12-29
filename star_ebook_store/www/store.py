@@ -10,7 +10,9 @@ def get_context(context):
 			"price_inr",
 			"format",
 			"route",
+			"creation",
 			"author.full_name as author_name",
 		],
 		filters={"is_published": True},
+		order_by="creation desc"
 	)
