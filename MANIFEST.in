@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include star_ebook_store *.css
+recursive-include star_ebook_store *.csv
+recursive-include star_ebook_store *.html
+recursive-include star_ebook_store *.ico
+recursive-include star_ebook_store *.js
+recursive-include star_ebook_store *.json
+recursive-include star_ebook_store *.md
+recursive-include star_ebook_store *.png
+recursive-include star_ebook_store *.py
+recursive-include star_ebook_store *.svg
+recursive-include star_ebook_store *.txt
+recursive-exclude star_ebook_store *.pyc
