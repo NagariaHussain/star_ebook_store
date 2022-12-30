@@ -7,7 +7,9 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "full_name"
+  "full_name",
+  "column_break_ovse",
+  "bio"
  ],
  "fields": [
   {
@@ -16,11 +18,20 @@
    "in_list_view": 1,
    "label": "Full Name",
    "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ovse",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bio",
+   "fieldtype": "Markdown Editor",
+   "label": "Bio"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-12-29 19:46:16.232272",
+ "modified": "2022-12-30 15:47:55.978975",
  "modified_by": "Administrator",
  "module": "Star Ebook Store",
  "name": "Author",
