@@ -1,8 +1,13 @@
 # Copyright (c) 2022, Hussain Nagaria and contributors
 # For license information, please see license.txt
 
-# import frappe
+import frappe
+
 from frappe.website.website_generator import WebsiteGenerator
 
+
 class eBook(WebsiteGenerator):
-	pass
+	def get_context(self, context):
+		context.author = frappe.db.get_value(
+			"Author", self.author, ["full_name", "bio"], as_dict=True
+		)
