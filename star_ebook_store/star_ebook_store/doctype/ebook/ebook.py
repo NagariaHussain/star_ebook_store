@@ -16,3 +16,6 @@ class eBook(WebsiteGenerator):
 		context.author = frappe.db.get_value(
 			"Author", self.author, ["full_name as name", "bio"], as_dict=True
 		)
+	
+	def send_via_email(self, recipient):
+		pass

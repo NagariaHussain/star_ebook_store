@@ -1,56 +1,7 @@
-{% extends "templates/store/base.html" %}
+{% extends "templates/web.html" %}
 
-{% block body %}
-
-<main class="container mb-6">
-    <nav class="breadcrumb mt-4" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/store">Store</a></li>
-            <li class="is-active"><a href="#" aria-current="page">{{ doc.name }}</a></li>
-        </ul>
-    </nav>
-
-    <div class="columns">
-        <div class="column is-one-third">
-            <img class="cover-image px-6" src="{{ doc.cover_image }}" alt="Book Cover Image">
-        </div>
-        <div class="column">
-            <div>
-                <h1 class="title is-1">{{ doc.name }}</h1>
-                <h2 class="subtitle is-4">by {{ author.name }}</h2>
-            </div>
-
-            <div class="mt-3">
-                <span class="tag is-link is-normal">{{ doc.format }}</span>
-            </div>
-
-            <div>
-                <a class="button is-medium is-outlined is-link mt-5" href="{{ doc.asset_file }}">Download</a>
-            </div>
-        </div>
-    </div>
-</main>
-
-<section class="container">
-    <div class="tabs">
-        <ul>
-            <li class="is-active"><a>Description</a></li>
-            <li><a>TOC</a></li>
-            <li><a>About the author</a></li>
-        </ul>
-    </div>
-
-    <div>
-        <p>{{ frappe.utils.md_to_html(doc.description) }}</p>
-    </div>
-
-    <div>
-        <p>{{ frappe.utils.md_to_html(doc.toc) }}</p>
-    </div>
-
-    <div>
-        <p>{{ frappe.utils.md_to_html(author.bio) }}</p>
-    </div>
-</section>
-
+{% block page_content %}
+<h1>{{ title }}</h1>
 {% endblock %}
+
+<!-- this is a sample default web page template -->
