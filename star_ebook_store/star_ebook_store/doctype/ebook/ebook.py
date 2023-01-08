@@ -16,6 +16,20 @@ class eBook(WebsiteGenerator):
 		context.author = frappe.db.get_value(
 			"Author", self.author, ["full_name as name", "bio"], as_dict=True
 		)
-	
+
 	def send_via_email(self, recipient):
-		pass
+		author_name = frappe.db.get_value("Author", self.author, "full_name")
+		args = {
+			"name": self.name,
+			"cover_image": self.cover_image,
+			"author_name": author_name,
+		}
+		asset_attachments = [{"file_url": self.asset_file}]
+
+		frappe.sendmail(
+			[recipient],
+			subject="[Star EBook Store] Your eBook has arrived!",
+			attachments=asset_attachments,
+			template="ebook_delivery",
+			args=args,
+		)
