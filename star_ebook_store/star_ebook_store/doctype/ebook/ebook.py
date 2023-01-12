@@ -17,6 +17,8 @@ class eBook(WebsiteGenerator):
 			"Author", self.author, ["full_name as name", "bio"], as_dict=True
 		)
 
+		context.csrf_token = frappe.sessions.get_csrf_token()
+
 	def send_via_email(self, recipient):
 		author_name = frappe.db.get_value("Author", self.author, "full_name")
 		args = {

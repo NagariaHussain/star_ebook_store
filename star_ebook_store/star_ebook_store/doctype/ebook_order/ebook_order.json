@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-01-12 15:18:18.466262",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "ebook",
+  "customer_email",
+  "column_break_rpdf",
+  "status",
+  "razorpay_details_section",
+  "order_amount",
+  "razorpay_order_id",
+  "column_break_rqzi",
+  "razorpay_payment_id",
+  "razorpay_signature"
+ ],
+ "fields": [
+  {
+   "fieldname": "razorpay_order_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Razorpay Order ID",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "razorpay_payment_id",
+   "fieldtype": "Data",
+   "label": "Razorpay Payment ID"
+  },
+  {
+   "fieldname": "razorpay_signature",
+   "fieldtype": "Data",
+   "label": "Razorpay Signature"
+  },
+  {
+   "fieldname": "ebook",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "eBook",
+   "options": "eBook",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_rpdf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Pending\nPaid\nDelivered"
+  },
+  {
+   "fieldname": "customer_email",
+   "fieldtype": "Data",
+   "label": "Customer Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "razorpay_details_section",
+   "fieldtype": "Section Break",
+   "label": "Razorpay Details"
+  },
+  {
+   "fieldname": "order_amount",
+   "fieldtype": "Currency",
+   "label": "Order Amount"
+  },
+  {
+   "fieldname": "column_break_rqzi",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-01-12 15:55:14.079635",
+ "modified_by": "Administrator",
+ "module": "Star Ebook Store",
+ "name": "eBook Order",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
