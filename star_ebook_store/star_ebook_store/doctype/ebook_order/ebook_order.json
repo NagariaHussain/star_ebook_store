@@ -15,8 +15,7 @@
   "order_amount",
   "razorpay_order_id",
   "column_break_rqzi",
-  "razorpay_payment_id",
-  "razorpay_signature"
+  "razorpay_payment_id"
  ],
  "fields": [
   {
@@ -31,11 +30,6 @@
    "fieldname": "razorpay_payment_id",
    "fieldtype": "Data",
    "label": "Razorpay Payment ID"
-  },
-  {
-   "fieldname": "razorpay_signature",
-   "fieldtype": "Data",
-   "label": "Razorpay Signature"
   },
   {
    "fieldname": "ebook",
@@ -79,7 +73,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-01-12 15:55:14.079635",
+ "modified": "2023-01-14 12:20:34.593520",
  "modified_by": "Administrator",
  "module": "Star Ebook Store",
  "name": "eBook Order",
