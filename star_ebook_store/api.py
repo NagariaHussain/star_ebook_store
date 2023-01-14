@@ -29,7 +29,7 @@ def create_ebook_order(ebook_name):
 	).insert(ignore_permissions=True)
 
 	return {
-		"key_id": key_id,
+		"key_id": client.auth[0],
 		"order_id": razorpay_order["id"],
 	}
 
