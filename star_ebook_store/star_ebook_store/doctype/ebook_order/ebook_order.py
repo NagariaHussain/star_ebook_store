@@ -15,6 +15,6 @@ class eBookOrder(Document):
 
 		try:
 			ebook_doc.send_via_email(self.customer_email)
-			ebook_doc.status = "Delivered"
+			self.status = "Delivered"
 		except:
 			ebook_doc.log_error("Ebook Deliver Error")
