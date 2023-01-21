@@ -1,7 +1,23 @@
 {% extends "templates/store/base.html" %}
 
+{% block head_script_tags %}
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+{% endblock %}
+
 {% block body %}
 
-<h1>Purchase Successful!</h1>
+<div class="container">
+    <h1 class="is-size-1 my-6 is-bold">Purchase Successful!</h1>
+    <img src="/assets/star_ebook_store/images/on_the_way.svg" alt="eBook on the way illustration">
+    <h2 class="is-size-5 my-6">Your eBook is on the way! Check your inbox!</h1>
+</div>
+
+<script>
+    confetti({
+        particleCount: 200,
+        spread: 120,
+        origin: { y: 0.6 }
+    });
+</script>
 
 {% endblock %}
