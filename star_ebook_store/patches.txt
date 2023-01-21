@@ -1,0 +1,1 @@
+star_ebook_store.star_ebook_store.doctype.ebook.patches.fix_route
