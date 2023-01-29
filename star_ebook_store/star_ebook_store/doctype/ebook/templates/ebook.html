@@ -2,6 +2,7 @@
 
 {% block head_script_tags %}
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 {% endblock %}
 
 {% block body %}
@@ -34,24 +35,24 @@
     </div>
 </main>
 
-<section class="container">
+<section class="container" x-data="{activeTab: 'description'}">
     <div class="tabs">
         <ul>
-            <li class="is-active"><a>Description</a></li>
-            <li><a>TOC</a></li>
-            <li><a>About the author</a></li>
+            <li :class="activeTab == 'description' ? 'is-active': ''" @click="activeTab = 'description'"><a>Description</a></li>
+            <li :class="activeTab == 'toc' ? 'is-active': ''" @click="activeTab = 'toc'"><a>TOC</a></li>
+            <li :class="activeTab == 'bio' ? 'is-active': ''" @click="activeTab = 'bio'"><a>About the author</a></li>
         </ul>
     </div>
 
-    <div>
+    <div x-show="activeTab == 'description'">
         <p>{{ frappe.utils.md_to_html(doc.description) }}</p>
     </div>
 
-    <div>
+    <div x-show="activeTab == 'toc'">
         <p>{{ frappe.utils.md_to_html(doc.toc) }}</p>
     </div>
 
-    <div>
+    <div x-show="activeTab == 'bio'">
         <p>{{ frappe.utils.md_to_html(author.bio) }}</p>
     </div>
 </section>
